@@ -1,0 +1,77 @@
+{
+  "release": "v1.0.0",
+  "checked_at_utc": "2026-11-05T14:06:38.733379+00:00",
+  "scope": "Existing deployment acceptance; no new model training or prompt experiment",
+  "health": {
+    "web": {
+      "status": "ok",
+      "stage": "rag_web_demo",
+      "paths_ready": true,
+      "missing_paths": [],
+      "backend": "vllm",
+      "retrieval_backend": "resident_http",
+      "answer_cache_enabled": true,
+      "message": "仅检查本地路径；vLLM连接和推理需单独验证。"
+    },
+    "retrieval_ready": true,
+    "served_model": "medical-qwen2",
+    "retrieval_device": "cpu",
+    "index_summary_sha256": "2b2c9fc783fc3180c00415116025b93ae6506576be25f908dacb6d35ab0cb809"
+  },
+  "unit_tests": {
+    "command": "python -m unittest discover -s tests",
+    "count": 73,
+    "result": "passed"
+  },
+  "tasks": [
+    {
+      "question": "没有头痛为什么仍需要实际测量血压？",
+      "status": "completed",
+      "answer": "很多血压升高的人平时没有察觉异常。要知道血压是否偏高，需要实际测量，不能单靠是否头痛来判断。[2]",
+      "cache_status": "miss",
+      "generation_executed": true,
+      "server_task_seconds": 8.6019
+    },
+    {
+      "question": "没有头痛为什么仍需要实际测量血压？",
+      "status": "completed",
+      "answer": "很多血压升高的人平时没有察觉异常。要知道血压是否偏高，需要实际测量，不能单靠是否头痛来判断。[2]",
+      "cache_status": "hit",
+      "generation_executed": false,
+      "server_task_seconds": 0.0699
+    },
+    {
+      "question": "资料给出的哮喘吸入药商品名和每次剂量是多少？",
+      "status": "completed",
+      "answer": "当前资料不足以回答该问题。",
+      "cache_status": "miss",
+      "generation_executed": true,
+      "server_task_seconds": 0.8091
+    }
+  ],
+  "checks": {
+    "identical_cached_answer_and_evidence": true,
+    "cached_request_skips_generation": true,
+    "supported_answer_cites_supporting_chunk": true,
+    "outside_corpus_question_abstained": true
+  },
+  "timing_note": "Acceptance observations, not a benchmark; server task time excludes external network and browser polling.",
+  "score_verification": {
+    "eval_base_test500_v2": {
+      "rows": 500,
+      "recomputed_score": 16.807149760234743,
+      "matches_summary": true
+    },
+    "eval_30k_test500_v1": {
+      "rows": 500,
+      "recomputed_score": 26.911864754113466,
+      "matches_summary": true
+    }
+  },
+  "same_test_questions_references_and_order": true,
+  "clean_archive_unit_tests": {
+    "count": 73,
+    "result": "passed"
+  },
+  "online_source_check": "app and resident retrieval/generation source matched cloud after LF normalization; auxiliary download/train wrapper and pilot config were not identical or absent on cloud"
+}

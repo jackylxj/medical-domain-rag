@@ -1,0 +1,4 @@
+# Direct dependencies. requirements.txt pins the installed environment.
+fastapi
+uvicorn
+pydantic-settings

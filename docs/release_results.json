@@ -1,0 +1,36 @@
+{
+  "recorded_experiment_date": "2026-11",
+  "base_test500": {
+    "count": 500,
+    "rouge_l_char_f1_0_to_100": 16.807149760234743,
+    "length_limited": 2,
+    "empty": 0,
+    "metric_definition": "mean per-example character LCS F1; whitespace removed; punctuation retained",
+    "warning": "Lexical overlap, not medical accuracy; not directly comparable to other ROUGE tokenization."
+  },
+  "lora_30k_test500": {
+    "count": 500,
+    "rouge_l_char_f1_0_to_100": 26.91186475411347,
+    "length_limited": 8,
+    "empty": 0,
+    "metric_definition": "mean per-example character LCS F1; whitespace removed; punctuation retained",
+    "warning": "Lexical overlap, not medical accuracy; not directly comparable to other ROUGE tokenization."
+  },
+  "train_30k": {
+    "epoch": 1.0,
+    "total_flos": 2.2447030071700685e+17,
+    "train_loss": 1.5780330787658692,
+    "train_runtime": 6897.023,
+    "train_samples_per_second": 4.35,
+    "train_steps_per_second": 1.087
+  },
+  "validation_500": {
+    "epoch": 1.0,
+    "eval_loss": 1.5537585020065308,
+    "eval_runtime": 38.0034,
+    "eval_samples_per_second": 13.157,
+    "eval_steps_per_second": 13.157
+  },
+  "source": "Saved cloud run artifacts; retrieved during release acceptance",
+  "comparison_note": "Character-level lexical overlap, not medical accuracy. Online model is original instruction model plus RAG."
+}

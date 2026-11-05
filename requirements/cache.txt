@@ -1,0 +1,2 @@
+# Optional web-process dependency; no GPU stack changes.
+redis==5.2.1

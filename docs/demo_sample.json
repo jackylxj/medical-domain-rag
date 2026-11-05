@@ -1,0 +1,81 @@
+{
+  "kind": "recorded_cloud_responses",
+  "samples": [
+    {
+      "question": "没有头痛为什么仍需要实际测量血压？",
+      "answer": "很多血压升高的人平时没有察觉异常。要知道血压是否偏高，需要实际测量，不能单靠是否头痛来判断。[2]",
+      "evidence": [
+        {
+          "source_id": "hypertension/概述/0001",
+          "title": "高血压",
+          "section": "概述",
+          "text": "血压读数包含两个数值，分别对应心脏收缩与舒张时血液对血管壁产生的压力。判断是否患有高血压需要结合不同日期的测量结果。",
+          "source": "https://www.who.int/zh/news-room/fact-sheets/detail/hypertension",
+          "version": "2025-09-25",
+          "cosine": 0.4556048512458801,
+          "citation": 1
+        },
+        {
+          "source_id": "hypertension/症状/0001",
+          "title": "高血压",
+          "section": "症状",
+          "text": "很多血压升高的人平时没有察觉异常。要知道血压是否偏高，需要实际测量，不能单靠是否头痛来判断。",
+          "source": "https://www.who.int/zh/news-room/fact-sheets/detail/hypertension",
+          "version": "2025-09-25",
+          "cosine": 0.44808006286621094,
+          "citation": 2
+        },
+        {
+          "source_id": "hypertension/不控制高血压可能会带来的并发症/0001",
+          "title": "高血压",
+          "section": "不控制高血压可能会带来的并发症",
+          "text": "血压长期控制不佳会增加心脏和脑血管损害的风险，也可能损伤肾脏。",
+          "source": "https://www.who.int/zh/news-room/fact-sheets/detail/hypertension",
+          "version": "2025-09-25",
+          "cosine": 0.3826633095741272,
+          "citation": 3
+        }
+      ],
+      "cited_numbers": [
+        2
+      ]
+    },
+    {
+      "question": "资料给出的哮喘吸入药商品名和每次剂量是多少？",
+      "answer": "当前资料不足以回答该问题。",
+      "evidence": [
+        {
+          "source_id": "asthma/治疗/0001",
+          "title": "哮喘",
+          "section": "治疗",
+          "text": "吸入药可将药物直接送达肺部。不同种类药物的作用包括帮助打开气道和减轻气道炎症。",
+          "source": "https://www.who.int/zh/news-room/fact-sheets/detail/asthma",
+          "version": "2026-04-28",
+          "cosine": 0.5558233261108398,
+          "citation": 1
+        },
+        {
+          "source_id": "asthma/概述/0001",
+          "title": "哮喘",
+          "section": "概述",
+          "text": "哮喘影响肺内的气道。气道炎症和周围肌肉收紧会让空气通过时遇到阻力。",
+          "source": "https://www.who.int/zh/news-room/fact-sheets/detail/asthma",
+          "version": "2026-04-28",
+          "cosine": 0.40272974967956543,
+          "citation": 2
+        },
+        {
+          "source_id": "asthma/自我保健/0001",
+          "title": "哮喘",
+          "section": "自我保健",
+          "text": "患者和家人需要了解症状加重时如何处理。卫生工作者可以与患者一起制定行动计划。",
+          "source": "https://www.who.int/zh/news-room/fact-sheets/detail/asthma",
+          "version": "2026-04-28",
+          "cosine": 0.38394343852996826,
+          "citation": 3
+        }
+      ],
+      "cited_numbers": []
+    }
+  ]
+}

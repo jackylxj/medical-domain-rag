@@ -1,0 +1,14 @@
+[
+  {"id":"new01","kind":"paraphrase","question":"身体没什么异样，能据此判断血压没升高吗？","expected_sources":["hypertension/症状"],"review":"应说明不能仅凭感觉判断，需要实际测量。"},
+  {"id":"new02","kind":"paraphrase","question":"1型糖尿病为什么需要每日补充胰岛素？","expected_sources":["diabetes/1型糖尿病"],"review":"体内产生的胰岛素不足；不得扩展未提供的用药剂量。"},
+  {"id":"new03","kind":"paraphrase","question":"孕妇感觉一切正常，还需要依靠筛查来发现血糖异常吗？","expected_sources":["diabetes/妊娠期糖尿病"],"review":"需要产前筛查，不能单凭主观感受。"},
+  {"id":"new04","kind":"paraphrase","question":"哮喘患者在症状恶化之前，能和卫生工作者共同制定哪种计划？","expected_sources":["asthma/自我保健"],"review":"行动计划；应根据证据回答而非拒答。"},
+  {"id":"new05","kind":"multi_section","question":"为什么没有头痛也要测血压，长期血压控制不佳又可能影响哪些器官？","expected_sources":["hypertension/症状","hypertension/不控制高血压可能会带来的并发症"],"review":"覆盖无明显症状仍需测量，以及心脏、脑血管、肾脏风险，逐项引用实际召回依据。"},
+  {"id":"new06","kind":"multi_section","question":"哮喘时气道为什么不通畅，吸入药能发挥哪些作用？","expected_sources":["asthma/概述","asthma/治疗"],"review":"覆盖气道炎症、肌肉收紧及不同吸入药打开气道或减轻炎症的作用。"},
+  {"id":"new07","kind":"multi_section","question":"除口渴和排尿增多外，血糖升高还可能有什么表现？哪些生活方式有助于预防2型糖尿病？","expected_sources":["diabetes/症状","diabetes/预防"],"review":"覆盖疲倦、体重下降和预防生活方式；若部分未召回，应指出资料缺口。"},
+  {"id":"new08","kind":"multi_section","question":"高血压风险因素中，哪些难以改变，哪些可以干预？长期控制不好有什么风险？","expected_sources":["hypertension/风险因素","hypertension/不控制高血压可能会带来的并发症"],"review":"覆盖年龄家族史、盐分运动体重及器官风险，不能只回答一半。"},
+  {"id":"new09","kind":"unanswerable","question":"资料中规定每天最多应该摄入多少克食盐？","expected_sources":[],"review":"当前摘要未提供克数，应说明资料不足，不凭已有知识填写数字。"},
+  {"id":"new10","kind":"unanswerable","question":"这份资料推荐的哮喘吸入药具体商品名和每次剂量是什么？","expected_sources":[],"review":"资料没有商品名和剂量，不能编造。"},
+  {"id":"new11","kind":"unanswerable","question":"妊娠期糖尿病筛查具体应在孕期第几周进行？","expected_sources":[],"review":"摘要没有孕周，应说明无法从当前资料确定。"},
+  {"id":"new12","kind":"unanswerable","question":"资料中治疗偏头痛的一线药物有哪些？","expected_sources":[],"review":"知识库未覆盖此问题，应说明资料不足，即使检索返回相关词片段也不能据此作答。"}
+]

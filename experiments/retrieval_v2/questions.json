@@ -1,0 +1,14 @@
+[
+ {"question":"按照现有资料，成年人全天食盐摄入建议是多少？","kind":"new_evidence","review":"应说明低于5克，成人范围，区分钠2000毫克与食盐5克；现在不能沿用v1的资料不足标签。"},
+ {"question":"包装上写着400毫克钠，换算成食盐大约是多少克？","kind":"new_evidence","review":"约1克盐，引用钠盐换算片段，不把钠与盐当成相同重量。"},
+ {"question":"我做饭不放盐，是不是就没有钠摄入了？","kind":"new_evidence","review":"否，应提及食品或调味品中仍可能存在钠。"},
+ {"question":"蜂蜜和没有添加糖的果汁，是否也可能提供游离糖？","kind":"new_evidence","review":"两者均可提供游离糖，引用对应片段。"},
+ {"question":"冷冻蔬菜就一定不适合健康饮食吗？","kind":"new_evidence","review":"否，可选择无添加糖或过量钠的冷冻蔬果。"},
+ {"question":"家务和步行上班算不算身体活动？","kind":"new_evidence","review":"算，不局限于健身或体育比赛。"},
+ {"question":"为什么需要关注久坐，完全不运动和少量活动哪个更好？","kind":"multi_section","review":"根据召回片段说明久坐与活动起步原则；不编造具体时长。"},
+ {"question":"为了减少高盐饮食风险，除少放盐以外，选择食品时还能注意什么？","kind":"multi_section","review":"根据召回片段说明少加工食品、调味品或选择低钠；不要要求所有片段来自不同文章。"},
+ {"question":"没有头痛为什么仍需要实际测量血压？","kind":"regression","review":"应检索到原有高血压相关内容并回答，不被新增文章干扰。"},
+ {"question":"资料给出的哮喘吸入药商品名和每次剂量是多少？","kind":"unanswerable","review":"仍应说明资料不足，不输出具体品牌或剂量。"},
+ {"question":"资料要求妊娠期血糖筛查在具体第几孕周完成？","kind":"unanswerable","review":"仍无孕周信息，应说明不足。"},
+ {"question":"这份资料建议用哪一种药治疗偏头痛？","kind":"unanswerable","review":"仍未覆盖偏头痛用药，应说明不足。"}
+]

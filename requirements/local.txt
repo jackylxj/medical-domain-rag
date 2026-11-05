@@ -1,0 +1,2 @@
+# Existing API environment; no GPU libraries.
+-r ../requirements.txt

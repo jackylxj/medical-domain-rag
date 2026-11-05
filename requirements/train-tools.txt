@@ -1,0 +1,4 @@
+# Utilities only. LLaMA-Factory owns torch/transformers/peft compatibility.
+# Use the existing cloud environment; do not reinstall CUDA/PyTorch blindly.
+PyYAML>=6,<7
+modelscope

@@ -1,0 +1,131 @@
+{
+  "status": "local_data_checks_passed_not_cloud_training",
+  "counts": {
+    "train_30000": 30000,
+    "train_3000": 3000,
+    "validation": 500,
+    "test": 500,
+    "dev100": 100
+  },
+  "files": {
+    "train_30000.jsonl": {
+      "records": 30000,
+      "sha256": "1fd7cce09d8bcb8625d7629d1e14d1f23102ba7831e625a1126e503ca5a031b3",
+      "labels": {
+        "眼耳鼻喉科": 2329,
+        "皮肤性病科": 4169,
+        "口腔科": 543,
+        "内科": 5009,
+        "妇产科": 5792,
+        "儿科": 3582,
+        "肿瘤科": 1705,
+        "感染与免疫科": 848,
+        "中医科": 422,
+        "其他": 192,
+        "外科": 1615,
+        "心理科学": 504,
+        "神经科学": 1686,
+        "男性健康科": 1369,
+        "生殖健康科": 231,
+        "急诊科": 4
+      }
+    },
+    "train_3000.jsonl": {
+      "records": 3000,
+      "sha256": "a37543c26ab46eda3acac407eb89d7533ec8b40b02ae2457a76f73a0f7494094",
+      "labels": {
+        "皮肤性病科": 417,
+        "肿瘤科": 171,
+        "内科": 501,
+        "外科": 162,
+        "妇产科": 579,
+        "儿科": 358,
+        "感染与免疫科": 85,
+        "中医科": 42,
+        "神经科学": 169,
+        "男性健康科": 137,
+        "心理科学": 50,
+        "眼耳鼻喉科": 233,
+        "口腔科": 54,
+        "其他": 19,
+        "生殖健康科": 23
+      }
+    },
+    "validation.jsonl": {
+      "records": 500,
+      "sha256": "73cfbec9d8410c46f911b264fed0c5fc0a486b4ce727f522672fb499bfaa3001",
+      "labels": {
+        "男性健康科": 23,
+        "皮肤性病科": 70,
+        "妇产科": 97,
+        "神经科学": 28,
+        "内科": 83,
+        "眼耳鼻喉科": 39,
+        "心理科学": 8,
+        "外科": 27,
+        "肿瘤科": 28,
+        "感染与免疫科": 14,
+        "儿科": 60,
+        "生殖健康科": 4,
+        "中医科": 7,
+        "口腔科": 9,
+        "其他": 3
+      }
+    },
+    "test.jsonl": {
+      "records": 500,
+      "sha256": "537f93646f394009f0a458570b8116d55b83d5f2a1e224743475f591401da6a7",
+      "labels": {
+        "肿瘤科": 28,
+        "男性健康科": 23,
+        "皮肤性病科": 70,
+        "内科": 83,
+        "妇产科": 97,
+        "中医科": 7,
+        "外科": 27,
+        "口腔科": 9,
+        "眼耳鼻喉科": 39,
+        "神经科学": 28,
+        "儿科": 60,
+        "感染与免疫科": 14,
+        "心理科学": 8,
+        "生殖健康科": 4,
+        "其他": 3
+      }
+    },
+    "dev100.jsonl": {
+      "records": 100,
+      "sha256": "e56950e7f6ed4f26f79433c4e9fc1fac9579069c4f1f755ab91878c2016404b9",
+      "labels": {
+        "眼耳鼻喉科": 8,
+        "儿科": 12,
+        "妇产科": 19,
+        "内科": 17,
+        "皮肤性病科": 14,
+        "肿瘤科": 5,
+        "外科": 5,
+        "其他": 1,
+        "神经科学": 5,
+        "男性健康科": 5,
+        "中医科": 1,
+        "感染与免疫科": 3,
+        "口腔科": 2,
+        "心理科学": 2,
+        "生殖健康科": 1
+      }
+    }
+  },
+  "checks": [
+    "hashes match",
+    "train/validation/test duplicate groups disjoint",
+    "pilot nested in train",
+    "smoke source records excluded"
+  ],
+  "limitations": [
+    "Rule-based screening, NOT clinical or complete privacy review.",
+    "Near duplicate blocking misses paraphrases with different prefixes and suffixes.",
+    "Source score is not a clinical correctness certificate.",
+    "train_3000 is nested in train_30000; dev100 is nested in validation.",
+    "Do not tune on test or add its QA to the RAG knowledge base."
+  ]
+}
