@@ -10,7 +10,11 @@ class DatasetChecks(unittest.TestCase):
   root=Path(__file__).resolve().parents[1]
   with tempfile.TemporaryDirectory() as tmp:
    output=Path(tmp)/'export'
-   subprocess.run([sys.executable,'-m','scripts.prepare_evidence_sft','--output',str(output)],cwd=root,check=True,capture_output=True)
+   sample=row()
+   sample['evidence'][0].update(title='Unit test fixture',section='Example')
+   source=Path(tmp)/'input.jsonl'
+   source.write_text(json.dumps(sample,ensure_ascii=False)+'\n',encoding='utf-8')
+   subprocess.run([sys.executable,'-m','scripts.prepare_evidence_sft','--input',str(source),'--output',str(output)],cwd=root,check=True,capture_output=True)
    manifest=json.loads((output/'manifest.json').read_text(encoding='utf-8'))
    for name,meta in manifest['files'].items():
     raw=(output/name).read_bytes()
