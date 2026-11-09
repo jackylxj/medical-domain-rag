@@ -33,6 +33,21 @@ flowchart LR
   V --> C
 ```
 
+### Core code map
+
+| Capability | Implementation |
+|---|---|
+| Deduplication and deterministic splits | [prepare_experiment.py](scripts/prepare_experiment.py) |
+| Training checks and artifact capture | [train.py](scripts/train.py), [configuration and log guide](configs/README.md) |
+| Base/LoRA evaluation | [evaluate.py](scripts/evaluate.py) |
+| Corpus ingestion and vector indexing | [build_text_index.py](scripts/build_text_index.py) |
+| Resident retrieval | [serve_retrieval.py](scripts/serve_retrieval.py) |
+| Task lifecycle and cache invalidation | [rag_service.py](app/rag_service.py) |
+| Redis TTL and client failure handling | [answer_cache.py](app/answer_cache.py) |
+| API and web interface | [main.py](app/main.py), [index.html](app/index.html) |
+| GPU service startup | [start_resident_cloud.sh](scripts/start_resident_cloud.sh) |
+| Dependency environments | [Environment guide](requirements/README.md) |
+
 ### Setup
 
 Use a CUDA-enabled Linux environment for GPU inference. Install the web dependencies from requirements.txt, the cache dependencies from requirements/cache.txt, and a compatible vLLM stack. Retrieval needs sentence-transformers, pymilvus, and milvus-lite in its own environment.
@@ -97,6 +112,21 @@ flowchart LR
   V --> O
   V --> C
 ```
+
+### 核心代码导航
+
+| 能力 | 实现入口 |
+|---|---|
+| 去重与确定性划分 | [prepare_experiment.py](scripts/prepare_experiment.py) |
+| 训练检查与产物留存 | [train.py](scripts/train.py)、[配置与日志说明](configs/README.md) |
+| 基座与 LoRA 评测 | [evaluate.py](scripts/evaluate.py) |
+| 语料入库与向量索引 | [build_text_index.py](scripts/build_text_index.py) |
+| 常驻检索 | [serve_retrieval.py](scripts/serve_retrieval.py) |
+| 任务生命周期与缓存失效 | [rag_service.py](app/rag_service.py) |
+| Redis TTL 与客户端异常处理 | [answer_cache.py](app/answer_cache.py) |
+| API 与网页 | [main.py](app/main.py)、[index.html](app/index.html) |
+| GPU 服务启动 | [start_resident_cloud.sh](scripts/start_resident_cloud.sh) |
+| 依赖环境 | [环境说明](requirements/README.md) |
 
 ### 启动说明
 
