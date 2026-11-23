@@ -159,3 +159,9 @@ python -m unittest discover -s tests
 ```
 
 数据来源见[来源与发布说明](docs/sources_and_release.md)。系统用于医疗知识检索，不提供个人诊断。
+
+## Evaluating the domain adapter / 领域适配评测
+
+Use the same manifest-verified input file for base and LoRA evaluation. Pass --split test for the held-out set and supply a separate output directory per model. Character-level ROUGE-L measures overlap with reference answers. Review evidence support, omissions and abstentions separately when choosing a serving configuration.
+
+CV 对应的领域适配配置为 configs/train_30k.yaml，训练规模为 30,000 对问答。固定 500 道保留题，用相同输入比较基座和 LoRA。运行 python -m scripts.evaluate 时显式指定 --data、--mode、--output 和 --split test，LoRA 另指定 --adapter。服务端 Redis 命中耗时按请求任务计时，与生成耗时分别解释。

@@ -28,6 +28,7 @@ def main():
     p.add_argument('--model', default='/mnt/workspace/models/Qwen2-7B-Instruct')
     p.add_argument('--adapter', type=Path, default=ROOT / 'outputs/qwen2_medical_pilot_v1')
     p.add_argument('--data', type=Path, default=ROOT / 'data/processed/medical_v1/dev100.jsonl')
+    p.add_argument('--split', choices=('validation', 'test'), default='validation', help='Label the supplied data split in the evaluation metadata')
     p.add_argument('--output', type=Path, required=True)
     args = p.parse_args()
     if args.output.exists() and any(args.output.iterdir()):
@@ -50,7 +51,7 @@ def main():
     metadata = {'mode': args.mode, 'model_args': model_args, 'system': SYSTEM,
                 'data_sha256': data_hash, 'data_file': str(args.data),
                 'adapter_sha256': sha256(args.adapter / 'adapter_model.safetensors') if args.mode == 'lora' else None,
-                'purpose': 'validation_comparison_not_clinical_accuracy'}
+                'purpose': args.split + '_comparison_not_clinical_accuracy'}
     (args.output / 'config.json').write_text(json.dumps(metadata, ensure_ascii=False, indent=2), encoding='utf-8')
     scores, lengths, empty = [], 0, 0
     with (args.output / 'predictions.jsonl').open('x', encoding='utf-8') as f:
@@ -77,3 +78,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
